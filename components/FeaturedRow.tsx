@@ -1,5 +1,6 @@
 import { ScrollView, View, Text } from "react-native";
 import { ArrowRightIcon } from "react-native-heroicons/outline";
+import { RestaurantCard } from "./RestaurantCard";
 type FeaturedRowProps = {
   id: string;
   title: string;
@@ -24,7 +25,20 @@ export const FeaturedRow: React.FC<FeaturedRowProps> = ({ id, title, description
         }}
         showsHorizontalScrollIndicator={false}
         className="pt-4"
-      ></ScrollView>
+      >
+        <RestaurantCard
+          id="123"
+          imgUrl="assets/sushi-place.jpg"
+          title="Yo! Sushi"
+          rating={4.5}
+          genre="Japanese"
+          address="123 Main St"
+          short_description="This is a test description"
+          dishes={[]}
+          long={20}
+          lat={0}
+        />
+      </ScrollView>
     </View>
   );
 };
