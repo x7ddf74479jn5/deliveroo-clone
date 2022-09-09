@@ -9,6 +9,7 @@ import {
   ChevronDownIcon,
 } from "react-native-heroicons/outline";
 import { Categories } from "../components/categories";
+import { FeaturedRow } from "../components/FeaturedRow";
 
 const navigation = useNavigation();
 export const HomeScreen = () => {
@@ -48,6 +49,25 @@ export const HomeScreen = () => {
 
       <ScrollView className="bg-gray-100" contentContainerStyle={{ paddingBottom: 100 }}>
         <Categories />
+
+        <FeaturedRow
+          id="1"
+          title="Featured"
+          description="Paid placements from our partners"
+          featuredCategory="featured"
+        />
+        <FeaturedRow
+          id="2"
+          title="Tasty Discount"
+          description="Everyone's been juicy discounts!"
+          featuredCategory="discounts"
+        />
+        <FeaturedRow
+          id="3"
+          title="Offers near you!"
+          description="Why not support your local restaurant tonight"
+          featuredCategory="offers"
+        />
       </ScrollView>
     </SafeAreaView>
   );
