@@ -6,6 +6,7 @@ import { ArrowLeftIcon, ChevronRightIcon, MapPinIcon, StarIcon } from "react-nat
 import { QuestionMarkCircleIcon } from "react-native-heroicons/solid";
 
 import { RootStackParamList } from "../App";
+import { DishRow } from "../components/DishRow";
 import { urlFor } from "../sanity";
 
 export const RestaurantScreen = () => {

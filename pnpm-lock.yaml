@@ -7,10 +7,12 @@ specifiers:
   '@sanity/client': 3.3.6
   '@sanity/image-url': 1.0.1
   '@types/react': ~17.0.21
+  '@types/react-currency-formatter': 1.1.4
   '@types/react-native': ~0.66.13
   expo: ~45.0.0
   expo-status-bar: ~1.3.0
   react: 17.0.2
+  react-currency-formatter: 1.1.0
   react-dom: 17.0.2
   react-native: 0.68.2
   react-native-heroicons: 3.0.0
@@ -30,6 +32,7 @@ dependencies:
   expo: 45.0.6_@babel+core@7.18.9
   expo-status-bar: 1.3.0
   react: 17.0.2
+  react-currency-formatter: 1.1.0_react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-native: 0.68.2_norqf6xakpapdcqpt7io6pfzsy
   react-native-heroicons: 3.0.0_krjmtjbezr7htrupe74wtsdcqe
@@ -42,6 +45,7 @@ dependencies:
 devDependencies:
   '@babel/core': 7.18.9
   '@types/react': 17.0.47
+  '@types/react-currency-formatter': 1.1.4
   '@types/react-native': 0.66.21
   tailwindcss: 3.1.6
   typescript: 4.3.5
@@ -2164,6 +2168,12 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react-currency-formatter/1.1.4:
+    resolution: {integrity: sha512-HhVJADdLzyuFumM8xdURGrS9cHWeS7f3RWYF4nPV4uaWfEtf48bLVRnE7/z8LiCXeF7rYJpT8rgOTpu7HLJU6A==}
+    dependencies:
+      '@types/react': 17.0.47
     dev: true
 
   /@types/react-native/0.66.21:
@@ -6083,6 +6093,15 @@ packages:
       ini: 1.3.8
       minimist: 1.2.6
       strip-json-comments: 2.0.1
+    dev: false
+
+  /react-currency-formatter/1.1.0_react@17.0.2:
+    resolution: {integrity: sha512-5AIHYk8WKKKfXfxQW7i7V3DTQkDNqRcqAWyTy3KTs89qooOTj1o5VWkPOLjIxKOSGir6nUt8Aw8WXxAGn5nY6w==}
+    peerDependencies:
+      react: 16.x
+    dependencies:
+      prop-types: 15.8.1
+      react: 17.0.2
     dev: false
 
   /react-devtools-core/4.25.0:
