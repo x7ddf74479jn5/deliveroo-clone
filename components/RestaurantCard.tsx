@@ -1,6 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
-import { Dish } from "../models";
+import { RootStackParamList } from "../App";
+import { Dish, Restaurant } from "../models";
 import { urlFor } from "../sanity";
 type RestaurantCardProps = {
   id: string;
@@ -27,8 +30,25 @@ export const RestaurantCard: React.FC<RestaurantCardProps> = ({
   long,
   lat,
 }) => {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   return (
-    <TouchableOpacity>
+    <TouchableOpacity
+      onPress={() => {
+        navigation.navigate("Restaurant", {
+          id,
+          imgUrl,
+          title,
+          rating,
+          genre,
+          address,
+          short_description,
+          dishes,
+          long,
+          lat,
+        });
+      }}
+    >
       <View className="bg-white mr-3 shadow">
         <Image
           source={{
