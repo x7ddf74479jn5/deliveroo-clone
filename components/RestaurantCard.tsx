@@ -1,5 +1,7 @@
 import { View, Image, Text, TouchableOpacity } from "react-native";
 import { MapPinIcon, StarIcon } from "react-native-heroicons/solid";
+import { Dish } from "../models";
+import { urlFor } from "../sanity";
 type RestaurantCardProps = {
   id: string;
   imgUrl: string;
@@ -8,7 +10,7 @@ type RestaurantCardProps = {
   genre: string;
   address: string;
   short_description: string;
-  dishes: string[];
+  dishes: Dish[];
   long: number;
   lat: number;
 };
@@ -30,7 +32,7 @@ export const RestaurantCard: React.FC<RestaurantCardProps> = ({
       <View className="bg-white mr-3 shadow">
         <Image
           source={{
-            uri: imgUrl,
+            uri: urlFor(imgUrl).url(),
           }}
           className="h-36 w-36 rounded-sm"
         />

@@ -15,7 +15,6 @@ export default {
       title: "Short description",
       validation: (Rule) => Rule.max(200),
     },
-
     {
       name: "restaurants",
       type: "array",
