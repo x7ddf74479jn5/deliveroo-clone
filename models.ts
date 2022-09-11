@@ -21,13 +21,13 @@ export type Featured = {
 };
 export type Restaurant = {
   id: string;
-  name: string;
+  title: string;
   short_description: string;
-  image: string;
+  imgUrl: string;
   lat: number;
   long: number;
   address: string;
   rating: number;
-  type: Category;
+  genre: string;
   dishes: Dish[];
 };

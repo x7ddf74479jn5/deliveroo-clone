@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 import { Dish } from "../models";
 import { RootState } from "../store";
 
-type Basket = {
+type BasketState = {
   items: Dish[];
 };
 
-const initialState: Basket = {
+const initialState: BasketState = {
   items: [],
 };
 
