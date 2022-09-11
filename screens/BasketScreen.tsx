@@ -100,7 +100,7 @@ export const BasketScreen = () => {
             </Text>
           </View>
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("PreparingOrder")}>
             <View className="rounded-lg bg-[#00CCBB] p-4">
               <Text className="text-center text-white text-lg font-bold">Place Order</Text>
             </View>

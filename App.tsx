@@ -8,11 +8,13 @@ import { RestaurantScreen } from "./screens/RestaurantScreen";
 import { Restaurant } from "./models";
 import { store } from "./store";
 import { BasketScreen } from "./screens/BasketScreen";
+import { PreparingOrderScreen } from "./screens/PreparingOrderScreen";
 
 export type RootStackParamList = {
   Home: undefined;
   Restaurant: Restaurant;
   Basket: undefined;
+  PreparingOrder: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -29,6 +31,11 @@ export default function App() {
               name="Basket"
               component={BasketScreen}
               options={{ presentation: "modal", headerShown: false }}
+            />
+            <Stack.Screen
+              name="PreparingOrder"
+              component={PreparingOrderScreen}
+              options={{ presentation: "fullScreenModal", headerShown: false }}
             />
           </Stack.Navigator>
         </TailwindProvider>
