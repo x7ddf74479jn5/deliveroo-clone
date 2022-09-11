@@ -1,3 +1,5 @@
+import { Nullable } from "./types";
+
 export type Category = {
   id: string;
   name: string;
@@ -30,4 +32,8 @@ export type Restaurant = {
   rating: number;
   genre: string;
   dishes: Dish[];
+};
+
+export const isRestaurantExists = (restaurant: Nullable<Restaurant>): restaurant is NonNullable<Restaurant> => {
+  return Object.values(restaurant).every((v) => v !== null);
 };

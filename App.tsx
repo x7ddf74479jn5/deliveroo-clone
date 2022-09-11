@@ -9,12 +9,14 @@ import { Restaurant } from "./models";
 import { store } from "./store";
 import { BasketScreen } from "./screens/BasketScreen";
 import { PreparingOrderScreen } from "./screens/PreparingOrderScreen";
+import { DeliveryScreen } from "./screens/DeliveryScreen";
 
 export type RootStackParamList = {
   Home: undefined;
   Restaurant: Restaurant;
   Basket: undefined;
   PreparingOrder: undefined;
+  Delivery: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -35,6 +37,11 @@ export default function App() {
             <Stack.Screen
               name="PreparingOrder"
               component={PreparingOrderScreen}
+              options={{ presentation: "fullScreenModal", headerShown: false }}
+            />
+            <Stack.Screen
+              name="Delivery"
+              component={DeliveryScreen}
               options={{ presentation: "fullScreenModal", headerShown: false }}
             />
           </Stack.Navigator>
